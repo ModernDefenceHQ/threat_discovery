@@ -8,7 +8,7 @@ on:
 jobs:
   scan_ip:
     env:
-      IP_HOST: '180.129.84.120'
+      IP_HOST: 'scanme.nmap.org'
     runs-on: ubuntu-latest
     steps:
       - uses: "MTES-MCT/nmap-action@main"
