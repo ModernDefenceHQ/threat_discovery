@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: "MTES-MCT/nmap-action@main"
         with:
-          host: ${{IP_HOST}}
+          host: ${{env.IP_HOST}}
           outputDir: 'scans'
           outputFile: 'nmapvuln.json'
           raw: false
