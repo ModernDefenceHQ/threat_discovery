@@ -5,16 +5,15 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  IP_HOST: scanme.nmap.org
-
 jobs:
-  scan:
+  scan_ip:
+    env:
+      IP_HOST: scanme.nmap.org
     runs-on: ubuntu-latest
     steps:
       - uses: "MTES-MCT/nmap-action@main"
         with:
-          host: $IP_HOST
+          host: ${{IP_HOST}}
           outputDir: 'scans'
           outputFile: 'nmapvuln.json'
           raw: false
